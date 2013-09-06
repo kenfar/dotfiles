@@ -1,7 +1,7 @@
 # ken:  set all my customizations:
 export EDITOR=vim
 set -o vi
-export PYTHONPATH=$HOME/lib/python
+export PATH=~/.local/bin:$PATH
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
@@ -82,10 +82,26 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-# some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
+export MANPAGER="/bin/sh -c \"col -b | vim -c 'set ft=man ts=8 foldmethod=indent nomod nolist nonu noma' -\""
+
+
+# enable programmable completion features (you don't need to enable
+# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
+# sources /etc/bash.bashrc).
+if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
+    . /etc/bash_completion
+fi
+
+
+# virtualenv stuff:
+export WORKON_HOME=~/Projects
+export VIRTUALENVWRAPPER_LOG_DIR="$WORKON_HOME"
+export VIRTUALENVWRAPPER_HOOK_DIR="$WORKON_HOME"
+source ~/.local/bin/virtualenvwrapper.sh
+export PIP_VIRTUALENV_BASE=$WORKON_HOME
+export PIP_RESPECT_VIRTUALENV=true
+alias cdv='cdvirtualenv'
+
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -96,9 +112,17 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-# enable programmable completion features (you don't need to enable
-# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
-# sources /etc/bash.bashrc).
-if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
-    . /etc/bash_completion
-fi
+# make & cd into directory:
+function mcd() {
+  mkdir -p "$1" && cd "$1";
+  }
+
+# list directories
+alias lf='ls -Gl | grep ^d' #Only list directories
+alias lsd='ls -Gal | grep ^d' #Only list directories, including hidden ones
+
+# some more ls aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+

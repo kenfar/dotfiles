@@ -27,7 +27,7 @@
 	""" Display tabs at the beginning of a line in Python mode as bad.
 	au BufRead,BufNewFile *.py,*.pyw match BadWhitespace /^\t\+/
 	""" Make trailing whitespace be flagged as bad.
-	au BufRead,BufNewFile *.py,*.pyw match BadWhitespace /\s\+$/
+	"""au BufRead,BufNewFile *.py,*.pyw match BadWhitespace /\s\+$/
 	
 	""" Wrap text after a certain number of characters
 	""" Python: 79 
@@ -98,6 +98,7 @@
         set statusline+=%*
         map <F6> :SyntasticCheck<CR>
 	let g:syntastic_python_checkers=['pylint']
+
 
 """""""" Powerline """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 	set nocompatible   " Disable vi-compatibility
