@@ -97,7 +97,8 @@ fi
 export WORKON_HOME=~/Projects
 export VIRTUALENVWRAPPER_LOG_DIR="$WORKON_HOME"
 export VIRTUALENVWRAPPER_HOOK_DIR="$WORKON_HOME"
-source ~/.local/bin/virtualenvwrapper.sh
+#source ~/.local/bin/virtualenvwrapper.sh
+source /usr/local/bin/virtualenvwrapper.sh
 export PIP_VIRTUALENV_BASE=$WORKON_HOME
 export PIP_RESPECT_VIRTUALENV=true
 alias cdv='cdvirtualenv'

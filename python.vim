@@ -8,7 +8,7 @@
 	""" Python: 4 spaces
 	setlocal shiftwidth=4
 	setlocal expandtab
-	# setlocal noexpandtab
+	""" setlocal noexpandtab
         setlocal softtabstop=4
 
 	"""turning smartindent off since we're using type based indentation
