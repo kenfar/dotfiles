@@ -94,7 +94,7 @@ fi
 
 
 # virtualenv stuff:
-export WORKON_HOME=~/Projects
+export WORKON_HOME=~/Envs
 export VIRTUALENVWRAPPER_LOG_DIR="$WORKON_HOME"
 export VIRTUALENVWRAPPER_HOOK_DIR="$WORKON_HOME"
 #source ~/.local/bin/virtualenvwrapper.sh
