@@ -1,9 +1,13 @@
-$!/usr/bin/env bash
+#!/usr/bin/env bash
 
-# pathogen:
+# install pathogen:
+mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+      curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+
+# install bundles:
+cd ~
 mkdir ~/.vim/bundle
 cd ~/.vim/bundle
-git clone git://github.com/tpope/vim-sensible.git
 git clone https://github.com/scrooloose/nerdtree.git
 git clone https://github.com/tmhedberg/SimpylFold.git
 git clone git://github.com/majutsushi/tagbar
