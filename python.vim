@@ -26,7 +26,7 @@
 	"""au BufRead,BufNewFile *.py,*.pyw match BadWhitespace /\s\+$/
 	
 	""" Wrap text after a certain number of characters
-	setlocal textwidth=79
+	setlocal textwidth=120
 	
 	""" Use UNIX (\n) line endings.
 	""" Only used for new files so as to not force existing files to change their
