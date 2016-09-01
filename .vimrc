@@ -45,7 +45,7 @@
         set statusline+=%*
         map <F6> :SyntasticCheck<CR>
 	let g:syntastic_python_checkers=['pylint']
-	let g:syntastic_python_pylint_post_args='--rcfile /home/ken/.vim/.pylintrc'
+	let g:syntastic_python_pylint_post_args='--rcfile /home/kenfar/.vim/.pylintrc'
 
 
 """""""" Powerline """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
