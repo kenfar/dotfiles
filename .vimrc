@@ -6,13 +6,15 @@
 	filetype plugin on
 	syntax on
 
+""""""" Searching """""""""""""""""""""""""""""""""""""""""""""""""""""
+        let g:ackprg = 'ag --nogroup --nocolor --column'
 
 """"""" Text File Stuff """""""""""""""""""""""""""""""""""""""""""""""""""""
 	au BufRead,BufNewFile *.txt set tabstop=4
 	au BufRead,BufNewFile *.txt set shiftwidth=4
 	au BufRead,BufNewFile *.txt set softtabstop=4
 	au BufRead,BufNewFile *.txt set expandtab
-	au BufRead,BufNewFile *.txt set textwidth=79
+	au BufRead,BufNewFile *.txt set textwidth=120
 
 
 """"""" Folding """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
