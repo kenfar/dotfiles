@@ -46,7 +46,10 @@
 	colorscheme elflord
 	
 	""" Automatically indent based on file type: 
+        " try some magic:  http://superuser.com/questions/68226/filetype-detection-not-working
+        filetype off
 	filetype indent on
+        filetype on
 
 	""" Keep indentation level from previous line: 
 	set autoindent
