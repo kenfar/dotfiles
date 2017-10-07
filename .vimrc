@@ -8,6 +8,7 @@
 
 """"""" Searching """""""""""""""""""""""""""""""""""""""""""""""""""""
         let g:ackprg = 'ag --nogroup --nocolor --column'
+        set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 """"""" Text File Stuff """""""""""""""""""""""""""""""""""""""""""""""""""""
 	au BufRead,BufNewFile *.txt set tabstop=4
@@ -57,7 +58,11 @@
 	set t_Co=256       " Explicitly tell Vim that the terminal supports 256 colors
 
    
-"""""""" NerdTree """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""" File Opening """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+        let g:ctrlp_map = '<c-p>'
+        let g:ctrlp_cmd = 'CtrlP'
+        set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc
+
 	map <F7> :NERDTreeToggle<CR>
 	map <C-h> gT
 	map <C-l> gt
