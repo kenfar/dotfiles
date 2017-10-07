@@ -14,4 +14,5 @@ git clone git://github.com/majutsushi/tagbar
 git clone https://github.com/scrooloose/syntastic.git
 git clone git://github.com/Lokaltog/vim-powerline.git
 git clone git://github.com/ervandew/supertab.git
-git clone https://github.com/mileszs/ack.vim.git ~/.vim/bundle/ack.vim
+git clone https://github.com/mileszs/ack.vim.git
+git clone https://github.com/kien/ctrlp.vim.git 
