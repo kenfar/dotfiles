@@ -51,6 +51,10 @@
 	let g:syntastic_python_pylint_post_args='--rcfile /home/kenfar/.vim/.pylintrc'
 
 
+"""""""" NerdTree """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+	let NERDTreeShowHidden=1
+ 
+
 """""""" Powerline """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 	set nocompatible   " Disable vi-compatibility
 	set laststatus=2   " Always show the statusline
