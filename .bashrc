@@ -92,18 +92,6 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-
-# virtualenv stuff:
-export WORKON_HOME=~/Envs
-export VIRTUALENVWRAPPER_LOG_DIR="$WORKON_HOME"
-export VIRTUALENVWRAPPER_HOOK_DIR="$WORKON_HOME"
-#source ~/.local/bin/virtualenvwrapper.sh
-source /usr/local/bin/virtualenvwrapper.sh
-export PIP_VIRTUALENV_BASE=$WORKON_HOME
-export PIP_RESPECT_VIRTUALENV=true
-alias cdv='cdvirtualenv'
-
-
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
@@ -128,6 +116,18 @@ alias la='ls -A'
 alias l='ls -CF'
 
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+### Obsolete
+###export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+###source <(kubectl completion bash)
 
-source <(kubectl completion bash)
+### Obsoletevirtualenv stuff:
+###export WORKON_HOME=~/Envs
+###export VIRTUALENVWRAPPER_LOG_DIR="$WORKON_HOME"
+###export VIRTUALENVWRAPPER_HOOK_DIR="$WORKON_HOME"
+######source ~/.local/bin/virtualenvwrapper.sh
+###source /usr/local/bin/virtualenvwrapper.sh
+###export PIP_VIRTUALENV_BASE=$WORKON_HOME
+###export PIP_RESPECT_VIRTUALENV=true
+###alias cdv='cdvirtualenv'
+
+
